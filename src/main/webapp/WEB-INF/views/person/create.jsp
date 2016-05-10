@@ -34,6 +34,7 @@
         var img = URL.createObjectURL($('#profile_image').valueOf()[0].value);
         $('.image').attr('src', img);
     }
+
 </script>
 
 
