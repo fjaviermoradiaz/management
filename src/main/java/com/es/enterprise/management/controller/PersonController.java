@@ -2,7 +2,7 @@ package com.es.enterprise.management.controller;
 
 import com.es.enterprise.management.domain.Person;
 import com.es.enterprise.management.form.PersonForm;
-import com.es.enterprise.management.service.PersonService;
+import com.es.enterprise.management.service.impl.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

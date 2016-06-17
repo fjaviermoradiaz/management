@@ -388,9 +388,9 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<%--<script src="/bower_components/jquery/dist/jquery.min.js"></script>--%>
+<script src="/js/jquery.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -404,10 +404,16 @@
 <!-- Custom Theme JavaScript -->
 <script src="/dist/js/sb-admin-2.js"></script>
 
+
+<%--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">--%>
+<%--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>--%>
+
 <!-- AngularJS library -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<%--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>--%>
 
 <%--<script src="/js/jquery.uploadPreview.min.js"></script>--%>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js">  </script>
 </body>
 
 </html>

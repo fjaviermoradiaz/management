@@ -4,39 +4,41 @@
 <body>
 <%@include file="../templates/structure.jsp" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-
-
 <style>
-    .image{
-        width:120px;
-        height:120px
+    .upload-button {
+        padding: 4px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: block;
+        float: left;
     }
 </style>
 <script>
-    $(document).on('ready', function() {
-        $('#profile_image').change( function(e) {
+    $(document).ready(function() {
 
-            var img = URL.createObjectURL(e.target.files[0]);
-            $('.image').attr('src', img);
+
+        var readURL = function(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.profile-pic').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+        $(".file-upload").on('change', function(){
+            readURL(this);
+        });
+
+        $(".upload-button").on('click', function() {
+            $(".file-upload").click();
         });
     });
-
-    $(function(){
-        $('#profile_image').trigger('change')( function(e) {
-
-            var img = URL.createObjectURL(e.target.files[0]);
-            $('.image').attr('src', img);
-        });
-    });
-
-    function changePhoto(e) {
-        console.log("Foto cambiada");
-        var img = URL.createObjectURL($('#profile_image').valueOf()[0].value);
-        $('.image').attr('src', img);
-    }
-
 </script>
-
 
 <div id="page-wrapper">
     <!-- Inicio Pruebas con angular -->
@@ -105,12 +107,9 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-4">
-            <!-- /.row -->
-            <div>
-                <img src="http://www.drodd.com/images12/facebook-profile-picture24.jpg" class="image">
-            </div>
-
-            <input onchange="changePhoto()" type="file" id="profile_image">
+            <img class="profile-pic" src="http://cdn.cutestpaw.com/wp-content/uploads/2012/07/l-Wittle-puppy-yawning.jpg" />
+            <div class="upload-button">Upload Image</div>
+            <input class="file-upload" type="file" accept="image/*"/>
         </div>
 
     </div>
