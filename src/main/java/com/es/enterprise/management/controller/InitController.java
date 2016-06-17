@@ -13,6 +13,6 @@ public class InitController {
 
     @RequestMapping(value = {"/","index"})
     public String index(Model model){
-        return "dashboard/index";
+        return "login/index";
     }
 }
