@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 
 /**
  * Created by fjmora on 17/06/16.
  */
+@Service("userDetailsService")
 public class CurrentUserDetailService implements UserDetailsService {
 
     @Autowired
