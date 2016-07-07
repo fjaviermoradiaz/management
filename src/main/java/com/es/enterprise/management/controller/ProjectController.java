@@ -8,9 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * Created by fjmora on 19/04/16.
- */
 @Controller
 @RequestMapping(value = {"","/project"})
 public class ProjectController {
