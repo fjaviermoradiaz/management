@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(value = {"","/employee"})
+
 public class EmployeeController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class EmployeeController {
         return "employee/index";
     }
 
-    @RequestMapping(value = "create")
+    @RequestMapping(value = {"/employee","create"})
     public String create(Model model){
 
         model.addAttribute("candidateList",personService.findAll());
@@ -37,7 +37,7 @@ public class EmployeeController {
         return "employee/create";
     }
 
-    @RequestMapping(value = "save", method = RequestMethod.POST)
+    @RequestMapping(value = {"/employee","save"}, method = RequestMethod.POST)
     public String save(EmployeeForm employeeForm){
         Employee employee = new Employee();
         employee.setJoiningDate(employeeForm.joiningDate);

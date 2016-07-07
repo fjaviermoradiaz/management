@@ -299,6 +299,9 @@
                             <li>
                                 <a href="/customer/"><i class="fa fa-suitcase fa-fw"></i> Customer</a>
                             </li>
+                            <li>
+                                <a href="/category/index"><i class="fa fa-suitcase fa-fw"></i> Category</a>
+                            </li>
                         </ul>
 
                     </li>
